@@ -12,3 +12,7 @@ This is a full-stack web application built as part of a technical assignment for
 
 ## 🗂️ Project Structure
 
+root/ 
+├── frontend/ → React + Vite + TypeScript (UI based on Figma) 
+└── backend/ → Node.js + Express +
+
