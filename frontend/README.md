@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# 🧩 Frontend – Full-Stack Internship Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend part of the full-stack internship assignment. It is built with **React**, **TypeScript**, and **Vite**, and uses **plain CSS** for styling based on the provided Figma design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Setup Instructions
 
-## Expanding the ESLint configuration
+### 1. Navigate to the frontend folder
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+If you're in the root folder:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+```bash
+cd frontend
+. Install dependencies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm install
+touch .env
+Start the development server with:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
+Then go to: http://localhost:5173
+🧱 Tech Stack
+React
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+TypeScript
+
+Vite
+
+Plain CSS
+
+📂 Project Structure
+bash
+Copy
+Edit
+frontend/
+├── public/            # Static files
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Route-based views
+│   ├── styles/        # CSS files
+│   └── main.tsx       # App entry point
+├── .env               # Environment variables
+├── index.html         # Main HTML template
+└── package.json       # Project metadata and scripts
+
