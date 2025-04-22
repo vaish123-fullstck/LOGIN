@@ -1,42 +1,48 @@
-# 🧩 Frontend – Full-Stack Internship Project
+# 🛠️ Backend – Full-Stack Internship Project
 
-This is the frontend part of the full-stack internship assignment. It is built with **React**, **TypeScript**, and **Vite**, and uses **plain CSS** for styling based on the provided Figma design.
+This is the backend portion of the full-stack internship assignment. It uses **Node.js**, **TypeScript**, **Express**, and **Prisma ORM** to handle user login functionality.
 
 ---
 
-## 🛠️ Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Navigate to the frontend folder
-
-If you're in the root folder:
+### 1. Navigate to the backend folder
 
 ```bash
-cd frontend
+cd backend
 npm install
-npm run dev
-Then go to: http://localhost:5173
+touch .env
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="your_jwt_secret_here"
+🧬 Prisma Setup
+After setting your .env file, run:
+
+npx prisma migrate dev --name init
+This will create the SQLite database and apply the schema.
 
 🧱 Tech Stack
-React
+Node.js
 
 TypeScript
 
-Vite
+Express
 
-Plain CSS
+Prisma ORM
+
+SQLite (local DB)
+
+JWT (for login authentication)
 
 📂 Project Structure
-bash
-Copy
-Edit
-frontend/
-├── public/            # Static files
-├── src/
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Route-based views
-│   ├── styles/        # CSS files
-│   └── main.tsx       # App entry point
-├── .env               # Environment variables
-├── index.html         # Main HTML template
-└── package.json       # Project metadata and scripts
 
+backend/
+├── prisma/
+│   └── schema.prisma     # Database schema
+├── src/
+│   ├── routes/           # Route handlers
+│   ├── controllers/      # Business logic
+│   ├── middleware/       # Auth, error handling
+│   └── index.ts          # Entry point
+├── .env                  # Environment variables
+├── package.json          # Dependencies and scripts
+└── tsconfig.json         # TypeScript config
